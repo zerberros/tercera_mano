@@ -34,7 +34,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Asociacion_impedancias">
        <attribute name="title">
@@ -654,7 +654,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>10</y>
+          <y>60</y>
           <width>109</width>
           <height>20</height>
          </rect>
@@ -670,7 +670,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>80</y>
           <width>109</width>
           <height>20</height>
          </rect>
@@ -686,7 +686,7 @@
         <property name="geometry">
          <rect>
           <x>220</x>
-          <y>260</y>
+          <y>310</y>
           <width>93</width>
           <height>27</height>
          </rect>
@@ -702,7 +702,7 @@
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>80</y>
+          <y>130</y>
           <width>113</width>
           <height>25</height>
          </rect>
@@ -715,7 +715,7 @@
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>110</y>
+          <y>160</y>
           <width>113</width>
           <height>25</height>
          </rect>
@@ -728,7 +728,7 @@
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>140</y>
+          <y>190</y>
           <width>113</width>
           <height>25</height>
          </rect>
@@ -741,7 +741,7 @@
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>170</y>
+          <y>220</y>
           <width>113</width>
           <height>25</height>
          </rect>
@@ -754,7 +754,7 @@
         <property name="geometry">
          <rect>
           <x>80</x>
-          <y>50</y>
+          <y>100</y>
           <width>85</width>
           <height>25</height>
          </rect>
@@ -787,7 +787,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>90</y>
+          <y>140</y>
           <width>62</width>
           <height>15</height>
          </rect>
@@ -803,7 +803,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>120</y>
+          <y>170</y>
           <width>62</width>
           <height>15</height>
          </rect>
@@ -819,7 +819,7 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>150</y>
+          <y>200</y>
           <width>62</width>
           <height>15</height>
          </rect>
@@ -835,13 +835,26 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>180</y>
+          <y>230</y>
           <width>62</width>
           <height>15</height>
          </rect>
         </property>
         <property name="text">
          <string>VG</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>161</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Punto de trabajo</string>
         </property>
        </widget>
       </widget>
