@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-#pyside-uic -o tercera_manoUI.py ./gui/tercera-manoUI.ui
 ###############################################################################
 # Copyleft (c) 2013 Jairo Estefanía. Some rights reserved.                    #
 # This program or module is free software: you can redistribute it and/or     #
@@ -44,7 +43,21 @@ class ControlMainWindow(QtGui.QMainWindow):
 		self.ui.label_3.setText("Valor Serie: " + str(self.sumaserie(a, b)))
 		self.ui.label_4.setText("Valor Paralelo: " + str(self.sumaparalelo(a, b)))
 
+	def calcula_de_impedancias(self):
+		freq = complex(self.ui.lE_cz_freq.text())
+		val = complex(0, float(self.ui.lE_cz_val.text()))
+		# cB_cz == comboBox de calculo de impedancias
+		if self.ui.cB_cz.currentText() == 'Condensador':
+			sol = 1/(2*pi*freq*val)#*complex(j))
+		#	self.ui.lb_cz_sol.setText(str(sol))
+		if self.ui.cB_cz.currentText() == 'Bobina':		
+			sol=2*pi*freq*val#*complex(j)
+			
+		self.ui.lb_cz_sol.setText(str(sol.evalf()))		
+		print("algo es algo {} + {}".format(freq,val))
+
 	def estrella_triangulo(self):
+		# lE_dt == entrada de texto (lineEdit) de estrella triangulo
 		z1 = complex(self.ui.lE_dt_1.text())
 		z2 = complex(self.ui.lE_dt_2.text())
 		z3 = complex(self.ui.lE_dt_3.text())
@@ -65,7 +78,7 @@ class ControlMainWindow(QtGui.QMainWindow):
 
 
 	def integrar(self):
-
+ 
 		f = self.ui.lineEdit_int_funcion.text()
 
 		f_var = [Symbol(self.ui.lineEdit_int_var_1.text())\
@@ -97,7 +110,7 @@ class ControlMainWindow(QtGui.QMainWindow):
 	def test_spin(self):
 		# Esto es para desactibar las entradas de texto de los limites
 		# y variables de integracion que no se vayan a usar, porque se quiera hacer una integral simple, por ejemplo.
-		# Es decir, para hacer integrales con una dos o tres iteracciones.
+
 		if int(self.ui.spinBox_int.text()) == 1:
 			self.ui.label_int_text_2.setEnabled(False)
 			self.ui.label_int_min_2.setEnabled(False)
@@ -159,7 +172,8 @@ class ControlMainWindow(QtGui.QMainWindow):
 		self.ui.setupUi(self)
 
 		# conexiones entre los eventos de la GUI y las funciones
-		QtCore.QObject.connect(self.ui.pushButton_calculo_impedancias, QtCore.SIGNAL("clicked()"), self.asociacion_de_impedancias)
+		QtCore.QObject.connect(self.ui.pushButton_asociacion_impedancias, QtCore.SIGNAL("clicked()"), self.asociacion_de_impedancias)
+		QtCore.QObject.connect(self.ui.pushButton_calcula_impedancias, QtCore.SIGNAL("clicked()"), self.calcula_de_impedancias)
 		QtCore.QObject.connect(self.ui.pushButton_integra, QtCore.SIGNAL("clicked()"), self.integrar)
 		QtCore.QObject.connect(self.ui.pushButton_deriva, QtCore.SIGNAL("clicked()"), self.derivar)
 		QtCore.QObject.connect(self.ui.pB_dt_cal, QtCore.SIGNAL("clicked()"), self.estrella_triangulo)

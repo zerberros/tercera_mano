@@ -34,7 +34,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Asociacion_impedancias">
        <attribute name="title">
@@ -72,7 +72,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_calculo_impedancias">
+           <widget class="QPushButton" name="pushButton_asociacion_impedancias">
             <property name="text">
              <string>Calcular</string>
             </property>
@@ -105,12 +105,15 @@
       </widget>
       <widget class="QWidget" name="Calculo_impedancias">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <attribute name="title">
         <string>Cálculo de impedancias</string>
        </attribute>
-       <widget class="QComboBox" name="comboBox_2">
+       <widget class="QComboBox" name="cB_cz">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -130,7 +133,7 @@
          </property>
         </item>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_6">
+       <widget class="QLineEdit" name="lE_cz_val">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -141,6 +144,9 @@
         </property>
        </widget>
        <widget class="QLabel" name="label">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -166,7 +172,10 @@
          <string>Frecuencia:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="lE_cz_freq">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -177,6 +186,9 @@
         </property>
        </widget>
        <widget class="QComboBox" name="comboBox_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -184,6 +196,35 @@
           <width>71</width>
           <height>22</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_calcula_impedancias">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>130</y>
+          <width>96</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Calcula</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_cz_sol">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>190</y>
+          <width>381</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>_</string>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard</set>
         </property>
        </widget>
       </widget>
@@ -891,12 +932,12 @@
   <tabstop>lineEdit_int_max_3</tabstop>
   <tabstop>lineEdit</tabstop>
   <tabstop>lineEdit_2</tabstop>
-  <tabstop>pushButton_calculo_impedancias</tabstop>
+  <tabstop>pushButton_asociacion_impedancias</tabstop>
   <tabstop>pushButton_integra</tabstop>
-  <tabstop>comboBox_2</tabstop>
-  <tabstop>lineEdit_6</tabstop>
+  <tabstop>cB_cz</tabstop>
+  <tabstop>lE_cz_val</tabstop>
   <tabstop>comboBox_3</tabstop>
-  <tabstop>lineEdit_7</tabstop>
+  <tabstop>lE_cz_freq</tabstop>
   <tabstop>pushButton_deriva</tabstop>
   <tabstop>cB_dt</tabstop>
   <tabstop>lE_dt_1</tabstop>
