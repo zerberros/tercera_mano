@@ -118,7 +118,7 @@
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>101</width>
+          <width>211</width>
           <height>22</height>
          </rect>
         </property>
@@ -245,30 +245,10 @@
        <attribute name="title">
         <string>Conversor estrella:triángulo</string>
        </attribute>
-       <widget class="QLineEdit" name="lE_dt_1">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>113</width>
-          <height>28</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lE_dt_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>230</y>
-          <width>113</width>
-          <height>28</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="lE_dt_3">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>110</x>
           <y>260</y>
           <width>113</width>
           <height>28</height>
@@ -298,9 +278,9 @@
        <widget class="QLabel" name="lb_dt_1">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>240</x>
           <y>210</y>
-          <width>101</width>
+          <width>441</width>
           <height>18</height>
          </rect>
         </property>
@@ -314,9 +294,9 @@
        <widget class="QLabel" name="lb_dt_2">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>240</x>
           <y>240</y>
-          <width>101</width>
+          <width>441</width>
           <height>18</height>
          </rect>
         </property>
@@ -330,9 +310,9 @@
        <widget class="QLabel" name="lb_dt_3">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>240</x>
           <y>270</y>
-          <width>101</width>
+          <width>441</width>
           <height>18</height>
          </rect>
         </property>
@@ -388,6 +368,26 @@
         </property>
         <property name="wordWrap">
          <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_dt_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>230</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_dt_1">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
         </property>
        </widget>
       </widget>
@@ -647,7 +647,7 @@
            <string>_</string>
           </property>
           <property name="textInteractionFlags">
-           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+           <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
           </property>
          </widget>
         </item>
@@ -747,8 +747,6 @@
   <tabstop>lE_cz_freq</tabstop>
   <tabstop>pushButton_deriva</tabstop>
   <tabstop>cB_dt</tabstop>
-  <tabstop>lE_dt_1</tabstop>
-  <tabstop>lE_dt_2</tabstop>
   <tabstop>lE_dt_3</tabstop>
   <tabstop>pB_dt_cal</tabstop>
   <tabstop>lineEdit_int_funcion</tabstop>
